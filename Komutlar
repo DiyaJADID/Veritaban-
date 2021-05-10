@@ -1,0 +1,24 @@
+create database if not exists Bote
+default character utf8
+default collate utf8_turkish_ci;
+
+show databases;
+
+use Bote;
+
+create table Ders (
+id int not null auto_increment primary key,
+DersAd varchar(25),
+Kredi int);
+
+show tables;
+
+insert into Ders (DersAd,Kredi) values ('progamlama',4),('Bilişim etiği',2);
+
+select * from Ders;
+
+desc Ders;
+
+drop database Bote;
+
+drop table Ders;
