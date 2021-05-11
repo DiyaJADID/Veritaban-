@@ -1,0 +1,38 @@
+create database if not exists Dersler
+default character set utf8
+default collate utf8_turkish_ci;
+
+use Dersler;
+
+create table Ogrenci (
+id int not null auto_increment primary key;
+isim varchar(45),
+Vize int,
+Final int;
+
+insert into Ogrenci (isim,Vize,Final) values
+('Diya',70.75),
+('Meryem',50,45),
+('Ahmet',35,45),
+('Murat',50,80),
+('Doğa',75,90);
+
+select * from Ogrenci;
+
+select * from Ogrenci order by Vize desc;
+
+select * from Ogrenci order by Final asc;
+
+select * from Ogrenci order by isim desc;
+
+select * from Ogrenci limit 1,3;
+
+select * from Ogrenci order by id desc limit 3;
+
+select * from Ogrenci order by id asc limit 2;
+
+select * from Ogrenci order by id asc limit 2,2;
+
+select * from Ogrenci where Vize=50;
+
+select * from Ogrenci where Final=45;
