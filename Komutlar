@@ -1,5 +1,5 @@
 create database if not exists Bote
-default character utf8
+default character set utf8
 default collate utf8_turkish_ci;
 
 show databases;
@@ -18,6 +18,8 @@ insert into Ders (DersAd,Kredi) values ('progamlama',4),('Bilişim etiği',2);
 select * from Ders;
 
 desc Ders;
+
+update ders set kredi=3 where id=2;
 
 drop database Bote;
 
