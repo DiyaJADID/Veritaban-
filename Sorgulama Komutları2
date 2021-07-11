@@ -1,0 +1,29 @@
+select * from Satilan order by Stok desc;
+
+select * from Satilan order by Stok asc;
+
+select * from Satilan order by Urun desc;
+
+select * from Satilan order by Urun asc;
+ 
+select * from Satilan limit 1,3;
+ 
+select * from Satilan limit 1,2;
+ 
+select * from Satilan limit 2,2;
+ 
+select * from Satilan order by id desc limit 3;
+ 
+select * from Satilan order by id asc limit 3;
+ 
+select * from Satilan order by id asc limit 1,3;
+ 
+select * from Satilan order by id desc limit 1,3;
+ 
+select * from Satilan where Birim=1;
+ 
+select * from Satilan where Birim=3;
+ 
+drop table Satilan;
+ 
+drop database Magaza;
