@@ -1,0 +1,31 @@
+create database if not exists Magaza
+default character set utf8
+default collate utf8_turkish_ci;
+ 
+use Magaza;
+ 
+create table Satilan (
+id int not null auto_increment primary key,
+Urun varchar(25),
+Saklama_Turu varchar(25),
+Tur varchar(25),
+Birim int,
+Stok int,
+Satis int);
+
+show databases;
+
+show tables;
+
+insert into Satilan (Urun,Saklama_Turu,Tur,Birim,Stok,Satis) values
+('Elma','Buz dolabı','Gıda',1,20,6);
+
+insert into Satilan (Urun,Saklama_Turu,Tur,Birim,Stok,Satis) values
+('Deterjan','Dolap','Temizlik',1,50,20),('Kalem','Çekmece','Kırtasiye',3,200,5),
+('Tahta','Oda','Kırtasiye',25,100,50), ('Çilek','Buz dolabı','Gıda',2,25,12);
+
+select * from Satilan;
+
+desc Satilan;
+
+update Satilan set Birim=3 where id=5;
